@@ -1,0 +1,17 @@
+<h1>Save any kind of movies</h1>
+<div class="d-flex justify-content-between">
+  <h2>My list</h2>
+  <span><%= link_to "Create new list", new_list_path  %></span>
+</div>
+
+ <div class="row">
+    <% @lists.each do |list| %>
+      <div class="co-12 colsm-6 col-md-4 mb-3">
+        <%= link_to list_path(list), class:'text-decoration-none' do %>
+          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list["photo"]%>)">
+            <%= list.name %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
