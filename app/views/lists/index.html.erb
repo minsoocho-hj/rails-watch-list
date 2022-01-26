@@ -1,17 +1,20 @@
-<h1>Save any kind of movies</h1>
-<div class="d-flex justify-content-between">
-  <h2>My list</h2>
-  <span><%= link_to "Create new list", new_list_path  %></span>
+<div class="banner mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1524712245354-2c4e5e7121c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2532&q=80);">
+  <div class="container">
+    <h1>Save any kind of movies</h1>
+    <h2>My list</h2>
+    <%= link_to "Create a new list", new_list_path, class: "btn btn-flat" %>
+  </div>
 </div>
 
- <div class="row">
-    <% @lists.each do |list| %>
-      <div class="co-12 colsm-6 col-md-4 mb-3">
-        <%= link_to list_path(list), class:'text-decoration-none' do %>
-          <div class="card-category" data-aos="zoom-in" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list["photo"]%>)">
-            <%= list.name %>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
+
+<div class="container">
+<h2>Your lists</h2>
+<div class="cards">
+  <% @lists.each do |list| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= list.photo.attached? ? cl_image_path(list.photo.key) : image_path('logo.JPG') %>')">
+    <%= link_to list.name, list_path(list), class:'text-decoration-none'%>
+    </div>
+  <% end %>
+</div>
+
+</div>
