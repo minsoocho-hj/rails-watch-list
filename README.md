@@ -1,24 +1,11 @@
-# README
+# My movie saver
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Create personal list by genre, with your favorite image
+- Add your favorite movie with comment. 
+- We provide Movie data includes rating & plots
 
-Things you may want to cover:
+> main page 
+![image](https://user-images.githubusercontent.com/71766604/151238263-5972ee68-4a8c-42c6-b7bc-b2514075aedf.png)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+> In your list
+![image](https://user-images.githubusercontent.com/71766604/151238829-8345f37f-34ce-42c5-8a75-81313bc151c2.png)
